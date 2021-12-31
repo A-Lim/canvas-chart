@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CategoryService, ChartModule, DataLabelService, ExportService, LegendService, LineSeriesService, TooltipService } from '@syncfusion/ej2-angular-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +11,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule
   ],
-  providers: [],
+  providers: [CategoryService, LegendService, TooltipService, DataLabelService, LineSeriesService, ExportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
